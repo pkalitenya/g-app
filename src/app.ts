@@ -22,6 +22,7 @@ dotenv.config({ path: ".env.example" });
 // Controllers (route handlers)
 
 import * as contactController from "./controllers/contact";
+import * as habr1Controller from "./controllers/habr1";
 
 
 
@@ -89,6 +90,8 @@ app.use(
  */
 app.get("/contact", contactController.getContact);
 app.post("/contact", contactController.postContact);
+
+app.get("/habr1", habr1Controller.getHabr1);
 
 
 
